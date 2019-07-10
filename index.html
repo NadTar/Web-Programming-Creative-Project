@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Name: Nadir Tareen
+Date: May 4, 2019
+Section: CSE 154 AJ
+
+This is the html file for the about page of my website. It contains basic information about myself and a link to my portfolio.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>Nadir Tareen</title>
+  </head>
+  <body>
+    <header>
+      <h1><strong>Nadir Tareen</strong></h1>
+    </header>
+    <main>
+      <p class="caption">
+        Welcome to my website.
+      </p>
+      <nav>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+      <section>
+        <h2>Intro<span class="open">></span></h2>
+        <p class="hidden">
+          I am a sophomore student majoring in Human Centered Design & Engineering. I am originally from Karachi, Pakistan.
+          Over this spring break I stayed in Seattle to recharge my batteries after a busy winter quarter. I did that by spending time with friends and family,
+          playing video games and keeping up with my passion for Brazilian Jiu Jitsu.
+        </p>
+      </section>
+      <section>
+        <h2>Classes I'm currently taking<span class="open">></span></h2>
+        <!--
+          *** TODO: Finish the following ordered list with classes you are currently taking (in order
+          of most-to-least favorite). We've shown you two list items, but you may need to add more.
+        -->
+        <ol class="hidden">
+          <li>CSE 154 Web Programming</li>
+          <li>HCDE 318 Introduction to User Centered Design</li>
+          <li>HCDE 231 Introduction to Technical Communication</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Five of My Favorite Things<span class="open">></span></h2>
+        <ol class="hidden">
+          <li><strong>Favorite animal:&nbsp;</strong>Snow Leopard&nbsp;<button id="snowbutton">Photo</button></li>
+          <li><strong>Favorite food:&nbsp;</strong> Gyro Super Turbo from Sultan's on the Ave (I eat this atleast once a week)</li>
+          <li><strong>Favorite TV show:&nbsp;</strong> Black Mirror</li>
+          <li><strong>Favorite hobby:&nbsp;</strong> Brazilian Jiu Jitsu</li>
+          <li><strong>Favorite sports:&nbsp; </strong> MMA, Football(Soccer), Cricket</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Movie Suggestor<span class="open">></span></h2>
+          <article id ="moviegen" class ="hidden">
+            <p>Choose a genre and a click the button to get a random movie suggestion from me</p>
+            <p>
+              Genre:
+              <label><input type="radio" name="genre" value="crime" checked />Crime</label>
+              <label><input type="radio" name="genre" value="scifi"/>Sci-Fi</label>
+              <label><input type="radio" name="genre" value="comedy"/>Comedy</label>
+              <label><input type="radio" name="genre" value="random"/>Random</label>
+            </p>
+            <button id ="moviebutton">Get Movie</button>
+            <div id = "movie">
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>2 Truths and a Lie<span class="open">></span></h2>
+          <article id ="game" class = "hidden">
+            <p >
+              For a fun way to get to know better I've implemented my personal version of 2 Truths &
+              a Lie. Clicking the button below will generate three statements about me, one of which
+              is true. Click on the what you think is the lie to reveal the answer.
+            </p>
+            <button id ="truthbutton">Generate</button>
+            <div id ="options"></div>
+            <div id ="comment"></div>
+          </article>
+        </section>
+        <section>
+          <h2>Travel Log<span class="open" id = "travelbutton">></span></h2>
+          <article id ="travel" class = "hidden">
+            <p >
+              This is a travel log of places I have been to and places I'd like to go to with
+              some interesting aspects of each place. Feel free to add suggestions!
+            </p>
+            <section id = "filters">
+              Filter:
+              <button id = "all">All</button>
+              <button id = "visited">Visited</button>
+              <button id = "novisit">Want to Visit/Suggested</button>
+            </section>
+            <br>
+            <form id="add">
+                Suggest<br>
+                City or Place:<br>
+                <input type="text" name="place" required><br>
+                Country<br>
+                <input type="text" name="country" required><br>
+            </form>
+            Points of Interest<br>
+            <textarea name="Points of Interest" form = "add" required></textarea><br>
+            <button id = "submit">Submit Suggestion</button>
+            <table>
+              <tr id = "tableheader">
+                <th>Place</th>
+                <th>Country</th>
+                <th>Visited</th>
+                <th>DateOfVisit</th>
+                <th>Interesting Aspects</th>
+              </tr>
+            </table>
+          </article>
+        </section>
+        <section>
+          <h2>One of my favorite quotes<span class="open">></span></h2>
+          <article class="hidden">
+            <blockquote>
+              <p>
+                <em>"The weakest of all weak things is a virtue which has not been tested in the fire."</em>
+              </p>
+            </blockquote>
+            <cite>Mark Twain</cite>
+          </article>
+        </section>
+      </main>
+    </body>
+  </html>
